@@ -77,9 +77,9 @@ SELECT * FROM invoices WHERE billing_city = 'Chicago' AND billing_state = 'IL' A
 -- Gotta reward those big spenders!
 SELECT billing_address FROM invoices WHERE billing_city = 'Mountain View' AND billing_state = 'CA' AND billing_country = 'USA' ORDER BY total DESC LIMIT 5;
 
-!!!-- A list of the 10 most valuable invoices made before January 1st, 2010
+-- A list of the 10 most valuable invoices made before January 1st, 2010
 -- Hint: Dates are formatted like 'YYYY-MM-DD' and you can compare them using '<', '>', '<=' and '>='
-SELECT * FROM invoices WHERE invoice_date < 2010-01-01 ORDER BY total DESC LIMIT 10;
+SELECT * FROM invoices WHERE invoice_date < '2010-01-01' ORDER BY total DESC LIMIT 10;
 
 -- The number of invoices from Chicago, IL
 SELECT COUNT(*) FROM invoices WHERE billing_city = 'Chicago' AND billing_state = 'IL' AND billing_country = 'USA';
